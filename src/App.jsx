@@ -7,12 +7,11 @@ import "./App.css";
 function App() {
   const [data, setData] = useState([]);
 
-  const space = "f5tcp40e8krx";
-  const accessToken = "JAFIfvuB9iid1VaMJXQrVZl2dIUHU8J7_XI45K73MHc";
+
   const client = createClient({
-    space,
+    space: import.meta.env.VITE_SPACE_ID ,
     environment: "master", // defaults to 'master' if not set
-    accessToken,
+    accessToken:import.meta.env.VITE_ACCESS_TOKEN,
   });
 
   // const getAll = () => {
